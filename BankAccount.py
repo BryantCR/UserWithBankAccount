@@ -7,11 +7,12 @@ class BankAccount:
         self.balance = balance
         BankAccount.initInfo.append(self)
 
-    def deposit( self, amount ):
+    def deposit2( self, amount ):
         self.balance += amount
+        print(f"Congratulations your new balance is: {self.balance}")
         return self
 
-    def make_withdrawal(self, amount):
+    def make_withdrawal2(self, amount):
         if amount <= self.balance:
             self.balance -= amount
         else:
@@ -30,6 +31,7 @@ class BankAccount:
 
     def allInfo(self):
         print(f"Balance: ${self.balance}, Interes rate: {self.interest_rate} " )
+        return self
 
     @classmethod
     def printAllAccountsInfo(cls):
